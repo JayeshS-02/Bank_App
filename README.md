@@ -16,30 +16,3 @@ It supports Balance, Deposit, Withdraw, Transfer, and Last 10 Transactions (newe
     InsufficientFundsException
     SameAccountTransferException
     DuplicateCustomerAccountException
-
-
-
-
-🧩 Architecture
-src/
-├─ presentation/
-│  └─ BankingApp.java               # CLI runner
-├─ service/
-│  ├─ BankService.java              # Service API
-│  └─ BankServiceImpl.java          # Business logic + seeding
-├─ repository/
-│  ├─ BankRepository.java           # Repo contract
-│  └─ BankRepositoryImpl.java       # Array-backed storage
-├─ models/
-│  ├─ Customer.java
-│  ├─ Account.java
-│  └─ Transaction.java              # + enum TransactionType
-├─ exceptions/
-│  ├─ InvalidAccountException.java
-│  ├─ InsufficientFundsException.java
-│  ├─ NegativeOrZeroAmountException.java
-│  ├─ SameAccountTransferException.java
-│  └─ DuplicateCustomerAccountException.java
-└─ util/
-   ├─ SampleDataUtil.java           # A001..A010 with initial balance = 0.0
-   └─ ValidationUtil.java           # Validations + latest10 helper
